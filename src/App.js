@@ -1,22 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
+import Rock from './models/Rock';
+import Paper from './models/Paper';
+import Scissors from './models/Scissors';
+import {checkWin, cpuMove} from './utils/moves';
 
 function App() {
+  
+  
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Choose your move:
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Rock onChoose={ () => alert(checkWin('ROCK', cpuMove())) }/>
+        <Paper onChoose={ () => alert(checkWin('PAPER', cpuMove())) }/>
+        <Scissors onChoose={ () => alert(checkWin('SCISSORS', cpuMove())) }/>
       </header>
     </div>
   );
