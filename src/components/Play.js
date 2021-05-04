@@ -1,29 +1,18 @@
 import { Link, useLocation } from 'react-router-dom';
 import { cpuMove, checkWin } from '../utils/moves';
 import './_Play.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-    faHandRock,
-    faHandPaper,
-    faHandScissors,
-} from '@fortawesome/free-regular-svg-icons';
 import Result from './Result';
+import Rock from './Rock';
+import Paper from './Paper';
+import Scissors from './Scissors';
 
 const Play = (props) => {
 
     const getIcon = (icon) => {
-        let classIcon = icon === 'PAPER' ? 'icon-paper' : (
-            icon === 'ROCK' ? 'icon-rock' : 'icon-scissors'
-        )
-        let faIcon = icon === 'PAPER' ? faHandPaper : (
-            icon === 'ROCK' ? faHandRock : faHandScissors
-        )
 
-        return <FontAwesomeIcon
-                className={classIcon}
-                icon={faIcon}
-                float="left"
-            />
+        return icon === 'PAPER' ? <Paper /> : (
+            icon === 'ROCK' ? <Rock /> : <Scissors />
+        )
     }
 
     const getResultMessage = (winner) => (

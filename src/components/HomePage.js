@@ -1,11 +1,8 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-    faHandRock,
-    faHandPaper,
-    faHandScissors,
-} from '@fortawesome/free-regular-svg-icons';
 import './_HomePage.scss';
 import { NavLink as Link } from 'react-router-dom';
+import Rock from './Rock';
+import Paper from './Paper';
+import Scissors from './Scissors';
 
 
 const Homepage = () => {
@@ -21,11 +18,7 @@ const Homepage = () => {
                         selected: "ROCK"
                     }
                     }}>
-                    <FontAwesomeIcon
-                        className="icon-rock"
-                        icon={faHandRock}
-                        float="left"
-                    />
+                    <Rock />
                 </Link>
                 <Link to={{
                     pathname: "/play",
@@ -33,11 +26,7 @@ const Homepage = () => {
                         selected: "PAPER"
                     }
                     }}>
-                    <FontAwesomeIcon
-                        className="icon-paper"
-                        icon={faHandPaper}
-                        float="right"
-                        />
+                    <Paper />
                 </Link>
             </div>
                 
@@ -48,10 +37,7 @@ const Homepage = () => {
                         selected: "SCISSORS"
                     }
                     }}>
-                    <FontAwesomeIcon
-                        className="icon-scissors"
-                        icon={faHandScissors}
-                    />
+                    <Scissors />
                 </Link>
             </div>
         </div>
