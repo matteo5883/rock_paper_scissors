@@ -1,7 +1,3 @@
-export const WIN = 1;
-export const LOOSE = -1;
-export const DRAW = 0;
-
 export const checkWin = (firstUser, secondUser) => {
     
     if(firstUser === 'ROCK') {

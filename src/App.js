@@ -1,25 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
-import Rock from './models/Rock';
-import Paper from './models/Paper';
-import Scissors from './models/Scissors';
-import {checkWin, cpuMove} from './utils/moves';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './components/Header';
+import Homepage from './components/HomePage';
+import Play from './components/Play';
+import { 
+  Route, Switch
+} from 'react-router-dom';
 
 function App() {
   
-  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Choose your move:
-        </p>
-        <Rock onChoose={ () => alert(checkWin('ROCK', cpuMove())) }/>
-        <Paper onChoose={ () => alert(checkWin('PAPER', cpuMove())) }/>
-        <Scissors onChoose={ () => alert(checkWin('SCISSORS', cpuMove())) }/>
-      </header>
-    </div>
+    
+      <div className="App">
+        <Header />
+        <Switch>
+          <Route exact path="/">
+            <Homepage />
+          </Route>
+          <Route path="/play">
+            <Play />
+          </Route>
+        </Switch>
+      </div>
+
   );
 }
 
