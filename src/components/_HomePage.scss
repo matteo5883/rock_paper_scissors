@@ -5,9 +5,22 @@
     color: blue;
 }
 
+
 .title {
     font-size: 36px;
     font-family: 'Courier New', Courier, monospace;
+}
+
+@media (max-width: 800px) {
+    .icon-rock, .icon-paper, .icon-scissors {
+        height: 80px;
+        width: 80px !important;
+        margin:20px;
+        color: blue;
+    }
+    .title {
+        font-size: 18px;
+    }
 }
 
 .textCenter {

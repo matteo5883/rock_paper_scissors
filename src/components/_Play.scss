@@ -20,6 +20,16 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
+@media (max-width: 800px) {
+    .text {
+        font-size: 18px;
+    }
+
+    .btn {
+        font-size: 18px;
+    }
+}
+
 .btn {
     max-width: 150px;
     border: 1px solid blue;
